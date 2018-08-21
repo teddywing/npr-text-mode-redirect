@@ -34,4 +34,4 @@ var url_parts = redirect_url.split('/');
 // Second-to-last URL part is the article ID
 var article_id = url_parts[url_parts.length - 2];
 
-location.assign('https://text.npr.org/s.php?sId=' + article_id);
+window.location.assign('https://text.npr.org/s.php?sId=' + article_id);
