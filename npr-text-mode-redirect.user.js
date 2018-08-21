@@ -29,6 +29,9 @@ var location = document.location;
 // The article ID is `630792401`
 var params = new URLSearchParams(location.search.substring(1));
 var redirect_url = params.get('origin');
-var article_id = redirect_url.split('/')[6];
+var url_parts = redirect_url.split('/');
+
+// Second-to-last URL part is the article ID
+var article_id = url_parts[url_parts.length - 2];
 
 location.assign('https://text.npr.org/s.php?sId=' + article_id);
